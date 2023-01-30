@@ -1,1 +1,1 @@
-#this is Flask application
+#this is an intro about Flask micro_framework application 
