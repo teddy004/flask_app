@@ -1,7 +1,6 @@
 from markupsafe import escape
 from flask import Flask
 
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -12,3 +11,7 @@ def hello_world():
 @app.route("/about/")
 def about():
     return "<h1>Well come to about page</h1>"
+
+@app.route("/capitalize/<word>/")
+def capitalize(word):
+    return "<h1>{}</h1>".format(escape(word.capitalize()))
